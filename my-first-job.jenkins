@@ -1,0 +1,15 @@
+pipline{
+    agent{
+        lable 'master'
+    }
+    options {
+        timestamps ()
+    }
+    stages {
+        stage ("runcommand"){
+            steps {
+                ssh root@10.220.106.13 "hostname"
+            }
+        }
+    }
+}
