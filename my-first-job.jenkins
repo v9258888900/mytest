@@ -8,7 +8,7 @@ pipline{
     stages {
         stage ("runcommand"){
             steps {
-                ssh root@10.220.106.13 "hostname"
+               sh 'ssh root@10.220.106.13 \'hostname\''
             }
         }
     }
