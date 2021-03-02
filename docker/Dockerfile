@@ -1,4 +1,4 @@
-FROM linux:alpine
+FROM alpine
 
 
 RUN apk update && apk add curl
