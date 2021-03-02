@@ -10,7 +10,9 @@ pipeline{
             steps {
                sh 'ssh root@10.220.106.13 \'hostname\''
             }
-            steps ("docker build"){
+        }
+        stage ("docker build"){
+            steps {
                echo '================= START BUILD IMAGE ======================'
                dir ('docker/'){
                    sh 'docker build -t "dsdsdsd:v1" .'
